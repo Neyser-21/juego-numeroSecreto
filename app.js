@@ -1,7 +1,7 @@
 let contador = 1;
 let numeroMaximo = 10;
 //let numeroUsuario = verificarIntentoUser()
-let numeroUsuario
+let numeroUsuario;
 let numeroSecreto;
 // Array para almacenar los números sorteados
 let numerosSorteados = []
@@ -19,7 +19,9 @@ function generarNumeroSecreto() {
 
         AsignarTextoElemento('p','Lo sentimos llegaste al maximo de intentos. prueba mas tarde');
 
-    } else {
+    } 
+    else
+    {
 
         // Verifica si el número generado ya está en la lista de números sorteados
         if (numerosSorteados.includes(numeroSecreto)) {
@@ -51,9 +53,9 @@ function verificarIntentoUser(){
     } 
 
     else if (numeroUsuario > numeroSecreto){
-        AsignarTextoElemento('p', 'el numero esperado es menor');
+        AsignarTextoElemento('p', 'el número esperado es menor');
     } else {
-        AsignarTextoElemento('p', 'el numero es mayor');
+        AsignarTextoElemento('p', 'el número es mayor');
     }
 
     contador ++;
@@ -70,7 +72,6 @@ function reiniciarJuego(){
 function nuevoJuego(){
     //limiar por completo el imput
     reiniciarJuego();
-
     //indicar mensaje de intervalo de numeros
     condicionesIniciales();
     //nuevo numero secreto
@@ -87,9 +88,9 @@ condicionesIniciales();
 
 //asignamos una funcion con los mensajes que se mostraran 
 function condicionesIniciales(){
-    AsignarTextoElemento('h1','juego adivina el numero');
-    AsignarTextoElemento('p','indica un numero del 1 al 10');
-    AsignarTextoElemento(`p`,`indica un numero del 1 al ${numeroMaximo}`);
+    AsignarTextoElemento('h1','juego adivina el número');
+    //AsignarTextoElemento('p','indica un número del 1 al 10');
+    AsignarTextoElemento(`p`,`indica un número del 1 al ${numeroMaximo}`);
     generarNumeroSecreto();
     contador = 1
 }
